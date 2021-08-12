@@ -2,7 +2,7 @@
 
 namespace WildWolf\WordPress\PerformanceTweaks;
 
-class Attachments {
+final class Attachments {
 	use Singleton;
 
 	/**
@@ -12,7 +12,7 @@ class Attachments {
 		$this->init();
 	}
 
-	public function init(): void {
+	private function init(): void {
 		add_action( 'pre_get_posts', [ $this, 'pre_get_posts' ] );
 	}
 

@@ -4,7 +4,7 @@ namespace WildWolf\WordPress\PerformanceTweaks;
 
 use WP_Scripts;
 
-class Scripts {
+final class Scripts {
 	use Singleton;
 
 	/**
@@ -14,7 +14,7 @@ class Scripts {
 		$this->init();
 	}
 
-	public function init(): void {
+	private function init(): void {
 		if ( ! is_admin() ) {
 			add_action( 'wp_default_scripts', [ $this, 'wp_default_scripts' ] );
 		}

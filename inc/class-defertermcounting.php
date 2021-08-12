@@ -2,7 +2,7 @@
 
 namespace WildWolf\WordPress\PerformanceTweaks;
 
-class DeferTermCounting {
+final class DeferTermCounting {
 	use Singleton;
 
 	/**
@@ -12,7 +12,7 @@ class DeferTermCounting {
 		$this->admin_init();
 	}
 
-	public function admin_init(): void {
+	private function admin_init(): void {
 		add_action( 'load-edit.php', [ $this, 'defer_term_counting' ] );
 	}
 

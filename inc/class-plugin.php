@@ -2,7 +2,7 @@
 
 namespace WildWolf\WordPress\PerformanceTweaks;
 
-class Plugin {
+final class Plugin {
 	use Singleton;
 
 	private function __construct() {
@@ -19,6 +19,7 @@ class Plugin {
 		Attachments::instance();
 		Emoji::instance();
 		Scripts::instance();
+		ResourceHints::instance();
 	}
 
 	public function admin_init(): void {

@@ -16,6 +16,7 @@ use WildWolf\WordPress\PerformanceTweaks\Emoji;
 use WildWolf\WordPress\PerformanceTweaks\Login;
 use WildWolf\WordPress\PerformanceTweaks\Plugin;
 use WildWolf\WordPress\PerformanceTweaks\PostMeta;
+use WildWolf\WordPress\PerformanceTweaks\ResourceHints;
 use WildWolf\WordPress\PerformanceTweaks\Scripts;
 use WildWolf\WordPress\PerformanceTweaks\Singleton;
 
@@ -32,6 +33,7 @@ if ( defined( 'ABSPATH' ) ) {
 			Login::class             => 'class-login.php',
 			Plugin::class            => 'class-plugin.php',
 			PostMeta::class          => 'class-postmeta.php',
+			ResourceHints::class     => 'class-resourcehints.php',
 			Scripts::class           => 'class-scripts.php',
 			Singleton::class         => 'trait-singleton.php',
 		];

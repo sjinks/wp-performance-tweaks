@@ -2,7 +2,7 @@
 
 namespace WildWolf\WordPress\PerformanceTweaks;
 
-class Content {
+final class Content {
 	use Singleton;
 
 	/**
@@ -12,7 +12,7 @@ class Content {
 		$this->init();
 	}
 
-	public function init(): void {
+	private function init(): void {
 		$this->remove_forceful_capitalization();
 		$this->remove_generator();
 		$this->remove_adjacent_posts_rel_link();

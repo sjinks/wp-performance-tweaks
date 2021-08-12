@@ -2,7 +2,7 @@
 
 namespace WildWolf\WordPress\PerformanceTweaks;
 
-class Emoji {
+final class Emoji {
 	use Singleton;
 
 	/**
@@ -12,7 +12,7 @@ class Emoji {
 		$this->init();
 	}
 
-	public function init(): void {
+	private function init(): void {
 		remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
 		remove_action( 'embed_head', 'print_emoji_detection_script' );
 		remove_action( 'wp_print_styles', 'print_emoji_styles' );

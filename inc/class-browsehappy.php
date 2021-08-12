@@ -4,7 +4,7 @@ namespace WildWolf\WordPress\PerformanceTweaks;
 
 use WP_Error;
 
-class BrowseHappy {
+final class BrowseHappy {
 	use Singleton;
 
 	/**
@@ -14,7 +14,7 @@ class BrowseHappy {
 		$this->admin_init();
 	}
 
-	public function admin_init(): void {
+	private function admin_init(): void {
 		add_action( 'pre_http_request', [ $this, 'pre_http_request' ], 99, 3 );
 	}
 

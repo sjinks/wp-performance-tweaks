@@ -2,7 +2,7 @@
 
 namespace WildWolf\WordPress\PerformanceTweaks;
 
-class Login {
+final class Login {
 	use Singleton;
 
 	/**
@@ -12,7 +12,7 @@ class Login {
 		$this->login_init();
 	}
 
-	public function login_init(): void {
+	private function login_init(): void {
 		add_filter( 'shake_error_codes', [ $this, 'shake_error_codes' ] );
 	}
 

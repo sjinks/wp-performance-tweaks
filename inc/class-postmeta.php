@@ -2,7 +2,7 @@
 
 namespace WildWolf\WordPress\PerformanceTweaks;
 
-class PostMeta {
+final class PostMeta {
 	use Singleton;
 
 	/**
@@ -12,7 +12,7 @@ class PostMeta {
 		$this->init();
 	}
 
-	public function init(): void {
+	private function init(): void {
 		add_filter( 'add_post_metadata', [ $this, 'add_post_metadata' ], 10, 3 );
 	}
 

@@ -7,7 +7,7 @@ use WP_Error;
 /**
  * @psalm-type CronEvent = object{ hook: string, timestamp: int, schedule: string|false, args: mixed[], interval?: int }
  */
-class DisablePings {
+final class DisablePings {
 	use Singleton;
 
 	/**
@@ -17,7 +17,7 @@ class DisablePings {
 		$this->init();
 	}
 
-	public function init(): void {
+	private function init(): void {
 		add_filter( 'pre_schedule_event', [ $this, 'pre_schedule_event' ], 10, 2 );
 		add_filter( 'schedule_event', [ $this, 'schedule_event' ] );
 	}
