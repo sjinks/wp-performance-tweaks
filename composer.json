@@ -12,7 +12,6 @@
         "johnpbloch/wordpress-core": "^5.8",
         "php-stubs/wordpress-stubs": "^5.8",
         "phpcompatibility/phpcompatibility-wp": "^2.1",
-        "phpunit/phpunit": "^7",
         "vimeo/psalm": "^4.9"
     },
     "scripts": {
