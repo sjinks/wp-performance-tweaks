@@ -4,7 +4,7 @@
     "license": "MIT",
     "type": "wordpress-plugin",
     "require": {
-        "composer/installers": "^2.0",
+        "composer/installers": "^1.0 || ^2.0",
         "php": "^7.4"
     },
     "require-dev": {
