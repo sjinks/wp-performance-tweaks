@@ -1,6 +1,7 @@
 {
     "name": "wildwolf/wp-performance-tweaks",
     "description": "Performance tweaks for WordPress",
+    "license": "MIT",
     "type": "wordpress-plugin",
     "require": {
         "composer/installers": "^2.0",
