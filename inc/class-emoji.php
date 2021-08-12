@@ -1,0 +1,27 @@
+<?php
+
+namespace WildWolf\WordPress\PerformanceTweaks;
+
+class Emoji {
+	use Singleton;
+
+	/**
+	 * Constructed during `init`
+	 */
+	private function __construct() {
+		$this->init();
+	}
+
+	public function init(): void {
+		remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+		remove_action( 'embed_head', 'print_emoji_detection_script' );
+		remove_action( 'wp_print_styles', 'print_emoji_styles' );
+
+		add_action( 'admin_init', [ $this, 'admin_init' ] );
+	}
+
+	public function admin_init(): void {
+		remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+		remove_action( 'admin_print_styles', 'print_emoji_styles' );
+	}
+}
