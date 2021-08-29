@@ -20,6 +20,7 @@ final class Plugin {
 		Emoji::instance();
 		Scripts::instance();
 		ResourceHints::instance();
+		Sitemap::instance();
 	}
 
 	public function admin_init(): void {

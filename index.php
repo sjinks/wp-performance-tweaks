@@ -19,6 +19,7 @@ use WildWolf\WordPress\PerformanceTweaks\PostMeta;
 use WildWolf\WordPress\PerformanceTweaks\ResourceHints;
 use WildWolf\WordPress\PerformanceTweaks\Scripts;
 use WildWolf\WordPress\PerformanceTweaks\Singleton;
+use WildWolf\WordPress\PerformanceTweaks\Sitemap;
 
 if ( defined( 'ABSPATH' ) ) {
 	spl_autoload_register( function ( string $class ) {
@@ -36,6 +37,7 @@ if ( defined( 'ABSPATH' ) ) {
 			ResourceHints::class     => 'class-resourcehints.php',
 			Scripts::class           => 'class-scripts.php',
 			Singleton::class         => 'trait-singleton.php',
+			Sitemap::class           => 'class-sitemap.php',
 		];
 
 		if ( isset( $class_map[ $class ] ) ) {

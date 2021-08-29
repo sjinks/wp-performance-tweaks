@@ -1,0 +1,35 @@
+<?php
+
+namespace WildWolf\WordPress\PerformanceTweaks;
+
+class Sitemap {
+	use Singleton;
+
+	/**
+	 * Constructed during `init`
+	 */
+	private function __construct() {
+		if ( ! empty( $_SERVER['REQUEST_URI'] ) ) {
+			$this->init();
+		}
+	}
+
+	private function init(): void {
+		// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- we only need raw 4 last characters of the REQUEST_URI, no need to waste time sanitizing the string
+		$request_uri = (string) ( $_SERVER['REQUEST_URI'] ?? '' );
+		$extension   = strtolower( substr( $request_uri, -4 ) );
+
+		if ( in_array( $extension, [ '.xml', '.xsl' ], true ) && false !== stripos( $request_uri, 'sitemap' ) ) {
+			$run = function_exists( 'sm_Setup' );
+			$run = (bool) apply_filters( 'ww_performance_tweaks_should_run_sitemap_optimizations', $run );
+
+			if ( $run ) {
+				add_action( 'after_setup_theme', [ $this, 'after_setup_theme' ], PHP_INT_MAX );
+			}
+		}
+	}
+
+	public function after_setup_theme(): void {
+		remove_all_actions( 'widgets_init' );
+	}
+}
