@@ -6,15 +6,15 @@ class Sitemap {
 	use Singleton;
 
 	/**
-	 * Constructed during `init`
+	 * Constructed during `plugins_loaded`
 	 */
 	private function __construct() {
 		if ( ! empty( $_SERVER['REQUEST_URI'] ) ) {
-			$this->init();
+			$this->plugins_loaded();
 		}
 	}
 
-	private function init(): void {
+	private function plugins_loaded(): void {
 		// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- we only need raw 4 last characters of the REQUEST_URI, no need to waste time sanitizing the string
 		$request_uri = (string) ( $_SERVER['REQUEST_URI'] ?? '' );
 		$extension   = strtolower( substr( $request_uri, -4 ) );
@@ -24,6 +24,7 @@ class Sitemap {
 			$run = (bool) apply_filters( 'ww_performance_tweaks_should_run_sitemap_optimizations', $run );
 
 			if ( $run ) {
+				// Hook order:  plugins_loaded, setup_theme, after_setup_theme, init, widgets_init
 				add_action( 'after_setup_theme', [ $this, 'after_setup_theme' ], PHP_INT_MAX );
 			}
 		}

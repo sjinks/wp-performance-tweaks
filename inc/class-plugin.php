@@ -6,7 +6,12 @@ final class Plugin {
 	use Singleton;
 
 	private function __construct() {
+		add_action( 'plugins_loaded', [ $this, 'plugins_loaded' ] );
 		add_action( 'init', [ $this, 'init' ] );
+	}
+
+	public function plugins_loaded(): void {
+		Sitemap::instance();
 	}
 
 	public function init(): void {
@@ -20,7 +25,6 @@ final class Plugin {
 		Emoji::instance();
 		Scripts::instance();
 		ResourceHints::instance();
-		Sitemap::instance();
 	}
 
 	public function admin_init(): void {
