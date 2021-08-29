@@ -15,8 +15,8 @@
         "vimeo/psalm": "^4.9"
     },
     "scripts": {
-        "phpcs": "phpcs . -s",
-        "phpcs:fix": "phpcbf .",
+        "phpcs": "phpcs",
+        "phpcs:fix": "phpcbf",
         "psalm": "psalm --long-progress --no-cache"
     },
     "config": {

@@ -12,7 +12,8 @@
 	<arg name="basepath" value="."/>
 	<arg name="parallel" value="8"/>
 	<arg name="extensions" value="php"/>
-	<config name="ignore_warnings_on_exit">true</config>
+	<arg value="s"/>
+	<config name="ignore_warnings_on_exit" value="true"/>
 
 	<rule ref="PHPCompatibilityWP"/>
 	<config name="testVersion" value="7.4-"/>
@@ -23,8 +24,5 @@
 		<exclude name="PEAR.Functions.FunctionCallSignature.MultipleArguments" />
 		<exclude name="PEAR.Functions.FunctionCallSignature.CloseBracketLine" />
 		<exclude name="Generic.Arrays.DisallowShortArraySyntax.Found" />
-	</rule>
-	<rule ref="WordPress.Files.FileName.InvalidClassFileName">
-		<exclude-pattern>/tests/*</exclude-pattern>
 	</rule>
 </ruleset>
