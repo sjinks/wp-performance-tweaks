@@ -4,7 +4,7 @@ Plugin name: Performance tweaks
 Description: Performance tweaks for WordPress
 Author: Volodymyr Kolesnykov
 Author URI: https://wildwolf.name/
-Version: 1.0.1
+Version: 1.1.3
 */
 
 use WildWolf\WordPress\PerformanceTweaks\Attachments;
