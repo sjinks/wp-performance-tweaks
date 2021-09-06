@@ -3,6 +3,16 @@
     "description": "Performance tweaks for WordPress",
     "license": "MIT",
     "type": "wordpress-plugin",
+    "keywords": [
+        "wordpress",
+        "wordpress plugin",
+        "wordpress-plugin",
+        "performance",
+        "tweaks",
+        "tuning",
+        "performance-tuning",
+        "performance-tuning"
+    ],
     "require": {
         "composer/installers": "^1.0 || ^2.0",
         "php": "^7.4"
