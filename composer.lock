@@ -797,16 +797,16 @@
         },
         {
             "name": "johnpbloch/wordpress-core",
-            "version": "5.8.0",
+            "version": "5.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/johnpbloch/wordpress-core.git",
-                "reference": "30d5db01a682521b0a6cc827953f016486504312"
+                "reference": "6b6004e8c16a3b9ebc3ddac29ca8542dfa5ec5ff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johnpbloch/wordpress-core/zipball/30d5db01a682521b0a6cc827953f016486504312",
-                "reference": "30d5db01a682521b0a6cc827953f016486504312",
+                "url": "https://api.github.com/repos/johnpbloch/wordpress-core/zipball/6b6004e8c16a3b9ebc3ddac29ca8542dfa5ec5ff",
+                "reference": "6b6004e8c16a3b9ebc3ddac29ca8542dfa5ec5ff",
                 "shasum": ""
             },
             "require": {
@@ -814,7 +814,7 @@
                 "php": ">=5.6.20"
             },
             "provide": {
-                "wordpress/core-implementation": "5.8.0"
+                "wordpress/core-implementation": "5.8.1"
             },
             "type": "wordpress-core",
             "notification-url": "https://packagist.org/downloads/",
@@ -841,7 +841,7 @@
                 "source": "https://core.trac.wordpress.org/browser",
                 "wiki": "https://codex.wordpress.org/"
             },
-            "time": "2021-07-20T16:52:26+00:00"
+            "time": "2021-09-09T02:46:00+00:00"
         },
         {
             "name": "netresearch/jsonmapper",
