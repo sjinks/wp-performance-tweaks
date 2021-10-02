@@ -17,6 +17,7 @@ final class Content {
 		$this->remove_generator();
 		$this->remove_adjacent_posts_rel_link();
 		$this->skip_found_rows();
+		$this->turn_off_https_migrator();
 	}
 
 	private function remove_forceful_capitalization(): void {
@@ -46,6 +47,13 @@ final class Content {
 
 	private function skip_found_rows(): void {
 		add_filter( 'wp_link_query_args', [ $this, 'wp_link_query_args' ], 10, 1 );
+	}
+
+	private function turn_off_https_migrator(): void {
+		remove_filter( 'the_content', 'wp_replace_insecure_home_url' );
+		remove_filter( 'the_excerpt', 'wp_replace_insecure_home_url' );
+		remove_filter( 'widget_text_content', 'wp_replace_insecure_home_url' );
+		remove_filter( 'wp_get_custom_css', 'wp_replace_insecure_home_url' );
 	}
 
 	/**
