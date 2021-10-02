@@ -46,7 +46,8 @@ final class Content {
 	}
 
 	private function skip_found_rows(): void {
-		add_filter( 'wp_link_query_args', [ $this, 'wp_link_query_args' ], 10, 1 );
+		add_filter( 'wp_link_query_args', [ $this, 'set_no_found_rows' ] );
+		add_filter( 'get_attached_media_args', [ $this, 'set_no_found_rows' ] );
 	}
 
 	private function turn_off_https_migrator(): void {
@@ -67,7 +68,7 @@ final class Content {
 	 * @param mixed[] $query An array of WP_Query arguments
 	 * @return mixed[]
 	 */
-	public function wp_link_query_args( $query ) {
+	public function set_no_found_rows( array $query ): array {
 		$query['no_found_rows'] = true;
 		return $query;
 	}
