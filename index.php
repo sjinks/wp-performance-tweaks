@@ -4,7 +4,7 @@
  * Description: Performance tweaks for WordPress
  * Author: Volodymyr Kolesnykov
  * Author URI: https://wildwolf.name/
- * Version: 1.1.5
+ * Version: 1.1.6
  */
 
 use WildWolf\WordPress\PerformanceTweaks\Plugin;

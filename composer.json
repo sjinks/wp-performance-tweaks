@@ -30,6 +30,11 @@
         "phpcs:fix": "phpcbf",
         "psalm": "psalm --long-progress --no-cache"
     },
+    "autoload": {
+        "classmap": [
+            "inc/"
+        ]
+    },
     "config": {
         "sort-packages": true,
         "platform": {
