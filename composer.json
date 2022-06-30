@@ -15,7 +15,7 @@
     ],
     "require": {
         "composer/installers": "^1.0 || ^2.0",
-        "php": "^7.4"
+        "php": "^7.4 || ^8.0"
     },
     "require-dev": {
         "automattic/vipwpcs": "^2.3",
@@ -30,6 +30,13 @@
         "psalm": "psalm --long-progress --no-cache"
     },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "platform": {
+            "php": "7.4"
+        },
+        "allow-plugins": {
+            "composer/installers": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
     }
 }
