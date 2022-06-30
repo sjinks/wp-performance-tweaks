@@ -1,0 +1,36 @@
+name: Code Style Check
+
+on:
+  push:
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  codestyle:
+    name: Run code style check
+    runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, '[ci skip]')"
+    steps:
+      - name: Check out source code
+        uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b # tag=v3.0.2
+
+      - name: Set up PHP
+        uses: shivammathur/setup-php@3eda58347216592f618bb1dff277810b6698e4ca # tag=v2.19.1
+        with:
+          php-version: "7.4"
+          coverage: none
+          tools: automattic/vipwpcs, phpcompatibility/phpcompatibility-wp
+        env:
+          fail-fast: 'true'
+
+      - name: Add error matcher
+        run: echo "::add-matcher::$(pwd)/.github/checkstyle-problem-matcher.json"
+
+      - name: Run style check
+        run: phpcs --report=checkstyle
