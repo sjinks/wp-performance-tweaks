@@ -1,1 +1,2 @@
-*.xml.dist  export-ignore
+/*.xml.dist  export-ignore
+/.*          export-ignore
