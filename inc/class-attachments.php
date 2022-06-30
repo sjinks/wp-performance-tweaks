@@ -2,6 +2,8 @@
 
 namespace WildWolf\WordPress\PerformanceTweaks;
 
+use WildWolf\Utils\Singleton;
+
 final class Attachments {
 	use Singleton;
 

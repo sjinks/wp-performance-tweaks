@@ -2,6 +2,8 @@
 
 namespace WildWolf\WordPress\PerformanceTweaks;
 
+use WildWolf\Utils\Singleton;
+
 final class Login {
 	use Singleton;
 
@@ -19,11 +21,10 @@ final class Login {
 	/**
 	 * Filters the error codes array for shaking the login form.
 	 *
-	 * @param string[] $shake_error_codes Error codes that shake the login form.
 	 * @return string[]
 	 * @psalm-return array<empty>
 	 */
-	public function shake_error_codes( $shake_error_codes ): array {
+	public function shake_error_codes(): array {
 		return [];
 	}
 }

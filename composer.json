@@ -14,8 +14,9 @@
         "performance-tuning"
     ],
     "require": {
+        "php": "^7.4 || ^8.0",
         "composer/installers": "^1.0 || ^2.0",
-        "php": "^7.4 || ^8.0"
+        "wildwolf/singleton-trait": "^1.0"
     },
     "require-dev": {
         "automattic/vipwpcs": "^2.3",

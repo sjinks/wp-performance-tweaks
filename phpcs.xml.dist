@@ -6,14 +6,11 @@
 
 	<exclude-pattern>\.git/*</exclude-pattern>
 	<exclude-pattern>vendor/*</exclude-pattern>
-	<exclude-pattern>wordpress/*</exclude-pattern>
-	<exclude-pattern>wordpress-tests-lib/*</exclude-pattern>
 
 	<arg name="basepath" value="."/>
 	<arg name="parallel" value="8"/>
 	<arg name="extensions" value="php"/>
 	<arg value="s"/>
-	<config name="ignore_warnings_on_exit" value="true"/>
 
 	<rule ref="PHPCompatibilityWP"/>
 	<config name="testVersion" value="7.4-"/>

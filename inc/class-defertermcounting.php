@@ -2,6 +2,8 @@
 
 namespace WildWolf\WordPress\PerformanceTweaks;
 
+use WildWolf\Utils\Singleton;
+
 final class DeferTermCounting {
 	use Singleton;
 
@@ -21,7 +23,7 @@ final class DeferTermCounting {
 			wp_defer_term_counting( true );
 			add_action( 'shutdown', function() {
 				wp_defer_term_counting( false );
-			});
+			}) ;
 		}
 	}
 }

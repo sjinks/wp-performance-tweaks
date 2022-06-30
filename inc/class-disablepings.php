@@ -2,6 +2,7 @@
 
 namespace WildWolf\WordPress\PerformanceTweaks;
 
+use WildWolf\Utils\Singleton;
 use WP_Error;
 
 /**

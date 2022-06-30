@@ -2,11 +2,12 @@
 
 namespace WildWolf\WordPress\PerformanceTweaks;
 
+use WildWolf\Utils\Singleton;
+
 /**
  * @psalm-type ResourceHint = string|array{href: string, 'as': string, crossorigin: string, pr: float, type: string}
  */
 final class ResourceHints {
-
 	use Singleton;
 
 	/**

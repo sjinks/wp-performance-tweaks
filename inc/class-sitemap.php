@@ -2,6 +2,8 @@
 
 namespace WildWolf\WordPress\PerformanceTweaks;
 
+use WildWolf\Utils\Singleton;
+
 class Sitemap {
 	use Singleton;
 
