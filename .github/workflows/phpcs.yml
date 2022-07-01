@@ -25,12 +25,14 @@ jobs:
         with:
           php-version: "7.4"
           coverage: none
-          tools: automattic/vipwpcs, phpcompatibility/phpcompatibility-wp
         env:
           fail-fast: 'true'
+
+      - name: Install dependencies
+        uses: ramsey/composer-install@f680dac46551dffb2234a240d65ae806c2999dd6 # tag=2.1.0
 
       - name: Add error matcher
         run: echo "::add-matcher::$(pwd)/.github/checkstyle-problem-matcher.json"
 
       - name: Run style check
-        run: phpcs --report=checkstyle
+        run: composer phpcs -- --report=checkstyle
