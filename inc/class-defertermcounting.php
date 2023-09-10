@@ -21,7 +21,7 @@ final class DeferTermCounting {
 	public function defer_term_counting(): void {
 		if ( isset( $_REQUEST['bulk_edit'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
 			wp_defer_term_counting( true );
-			add_action( 'shutdown', function() {
+			add_action( 'shutdown', function () {
 				wp_defer_term_counting( false );
 			});
 		}
