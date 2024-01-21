@@ -1,7 +1,5 @@
 <?xml version="1.0"?>
-<ruleset name="VIP-Go-mu-plugins">
-	<description>Custom ruleset for VIP Go mu-plugins</description>
-
+<ruleset name="wp-perormance-tweaks">
 	<file>.</file>
 
 	<exclude-pattern>\.git/*</exclude-pattern>
@@ -13,13 +11,16 @@
 	<arg value="s"/>
 
 	<rule ref="PHPCompatibilityWP"/>
-	<config name="testVersion" value="7.4-"/>
+	<rule ref="WordPress-Core"/>
 	<rule ref="WordPress-Extra"/>
-	<config name="minimum_supported_wp_version" value="5.8"/>
 	<rule ref="WordPress-VIP-Go">
 		<exclude name="PEAR.Functions.FunctionCallSignature.ContentAfterOpenBracket" />
 		<exclude name="PEAR.Functions.FunctionCallSignature.MultipleArguments" />
 		<exclude name="PEAR.Functions.FunctionCallSignature.CloseBracketLine" />
 		<exclude name="Universal.Arrays.DisallowShortArraySyntax.Found" />
+		<exclude name="Universal.Operators.DisallowShortTernary.Found" />
 	</rule>
+
+	<config name="testVersion" value="7.4-"/>
+	<config name="minimum_supported_wp_version" value="5.9"/>
 </ruleset>

@@ -11,13 +11,13 @@ class Sitemap {
 	 * Constructed during `plugins_loaded`
 	 */
 	private function __construct() {
+		/** @psalm-suppress RiskyTruthyFalsyComparison */
 		if ( ! empty( $_SERVER['REQUEST_URI'] ) ) {
 			$this->plugins_loaded();
 		}
 	}
 
 	private function plugins_loaded(): void {
-		/** @psalm-suppress RedundantCast */
 		// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- we only need raw 4 last characters of the REQUEST_URI, no need to waste time sanitizing the string
 		$request_uri = (string) ( $_SERVER['REQUEST_URI'] ?? '' );
 		$extension   = strtolower( substr( $request_uri, -4 ) );

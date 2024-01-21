@@ -43,8 +43,7 @@ final class ResourceHints {
 					$href = '//' . $href;
 				}
 
-				/** @var string|null */
-				$host = wp_parse_url( $href, PHP_URL_HOST );
+				$host = (string) wp_parse_url( $href, PHP_URL_HOST );
 
 				if ( $host && 's.w.org' !== $host ) {
 					$ret[] = $url;
