@@ -27,7 +27,6 @@ final class DisablePings {
 	 * @param null|bool|WP_Error $pre      Value to return instead. Default null to continue adding the event.
 	 * @param object $event                An object containing an event's data
 	 * @psalm-param CronEvent $event
-	 * @param bool $wp_error               Whether to return a WP_Error on failure.
 	 * @return null|bool|WP_Error
 	 */
 	public function pre_schedule_event( $pre, $event ) {
