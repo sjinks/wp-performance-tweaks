@@ -20,11 +20,12 @@ final class PostMeta {
 
 	/**
 	 * @param null|bool $check      Whether to allow adding metadata for the given type.
-	 * @param int       $object_id  ID of the object metadata is for.
+	 * @param int       $_object_id ID of the object metadata is for.
 	 * @param string    $meta_key   Metadata key.
 	 * @return null|bool
+	 * @api
 	 */
-	public function add_post_metadata( $check, $object_id, $meta_key ) {
+	public function add_post_metadata( $check, $_object_id, $meta_key ) {
 		return '_encloseme' === $meta_key ? false : $check;
 	}
 }

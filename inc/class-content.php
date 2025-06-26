@@ -61,6 +61,8 @@ final class Content {
 
 	/**
 	 * Filters the output of the XHTML generator tag for display.
+	 *
+	 * @api
 	 */
 	public function the_generator(): string {
 		return '';
@@ -69,6 +71,7 @@ final class Content {
 	/**
 	 * @param mixed[] $query An array of WP_Query arguments
 	 * @return mixed[]
+	 * @api
 	 */
 	public function set_no_found_rows( array $query ): array {
 		$query['no_found_rows'] = true;

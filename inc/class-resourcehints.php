@@ -27,6 +27,7 @@ final class ResourceHints {
 	 * @param string $relation_type  The relation type the URLs are printed for
 	 * @return array
 	 * @psalm-return ResourceHint[]
+	 * @api
 	 */
 	public function wp_resource_hints( $urls, $relation_type ) {
 		if ( 'dns-prefetch' !== $relation_type ) {
