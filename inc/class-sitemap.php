@@ -17,6 +17,9 @@ final class Sitemap {
 		}
 	}
 
+	/**
+	 * @psalm-suppress RedundantCast
+	 */
 	private function plugins_loaded(): void {
 		// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- we only need raw 4 last characters of the REQUEST_URI, no need to waste time sanitizing the string
 		$request_uri = (string) ( $_SERVER['REQUEST_URI'] ?? '' );

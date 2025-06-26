@@ -23,6 +23,7 @@ final class Login {
 	 *
 	 * @return string[]
 	 * @psalm-return array<empty>
+	 * @api
 	 */
 	public function shake_error_codes(): array {
 		return [];

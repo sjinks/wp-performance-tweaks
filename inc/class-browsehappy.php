@@ -21,11 +21,12 @@ final class BrowseHappy {
 
 	/**
 	 * @param false|array|WP_Error $preempt   Whether to preempt an HTTP request's return value
-	 * @param mixed[] $request                HTTP request arguments
+	 * @param mixed[] $_request               HTTP request arguments
 	 * @param string $url                     The request URL
 	 * @return false|array|WP_Error
+	 * @api
 	 */
-	public function pre_http_request( $preempt, $request, $url ) {
+	public function pre_http_request( $preempt, $_request, $url ) {
 		if ( preg_match( '!^https?://api\.WordPress\.org/core/(?:browse|serve)-happy/!i', $url ) ) {
 			return new WP_Error( 'http_request_failed', sprintf( 'Request to %s is not allowed.', $url ) );
 		}

@@ -28,6 +28,7 @@ final class DisablePings {
 	 * @param object $event                An object containing an event's data
 	 * @psalm-param CronEvent $event
 	 * @return null|bool|WP_Error
+	 * @api
 	 */
 	public function pre_schedule_event( $pre, $event ) {
 		if ( null !== $pre ) {
@@ -42,6 +43,7 @@ final class DisablePings {
 	 * @psalm-param false|CronEvent $event
 	 * @return object|false
 	 * @psalm-return false|CronEvent
+	 * @api
 	 */
 	public function schedule_event( $event ) {
 		if ( ! is_object( $event ) ) {
