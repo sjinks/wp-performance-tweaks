@@ -14,8 +14,8 @@
         "performance-tuning"
     ],
     "require": {
-        "php": "^7.4 || ^8.0",
-        "composer/installers": "^1.0 || ^2.0",
+        "php": "^8.1",
+        "composer/installers": "^2.0",
         "wildwolf/singleton-trait": "^1.0"
     },
     "require-dev": {
@@ -28,7 +28,7 @@
     "scripts": {
         "phpcs": "phpcs",
         "phpcs:fix": "phpcbf",
-        "psalm": "psalm --long-progress --no-cache"
+        "psalm": "psalm --long-progress --no-cache -m"
     },
     "autoload": {
         "classmap": [
@@ -38,7 +38,7 @@
     "config": {
         "sort-packages": true,
         "platform": {
-            "php": "7.4"
+            "php": "8.1.31"
         },
         "allow-plugins": {
             "composer/installers": true,
