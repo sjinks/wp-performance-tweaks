@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3379cc0cef9a54ab71f7450977d97b49",
+    "content-hash": "e100e12dd6fcc3ae83b9a24e98d4fbd8",
     "packages": [
         {
             "name": "composer/installers",
@@ -2069,16 +2069,16 @@
         },
         {
             "name": "php-stubs/wordpress-stubs",
-            "version": "v6.8.2",
+            "version": "v7.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-stubs/wordpress-stubs.git",
-                "reference": "9c8e22e437463197c1ec0d5eaa9ddd4a0eb6d7f8"
+                "reference": "394570301894799e69a4aa117c9c995427e3ba04"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-stubs/wordpress-stubs/zipball/9c8e22e437463197c1ec0d5eaa9ddd4a0eb6d7f8",
-                "reference": "9c8e22e437463197c1ec0d5eaa9ddd4a0eb6d7f8",
+                "url": "https://api.github.com/repos/php-stubs/wordpress-stubs/zipball/394570301894799e69a4aa117c9c995427e3ba04",
+                "reference": "394570301894799e69a4aa117c9c995427e3ba04",
                 "shasum": ""
             },
             "conflict": {
@@ -2088,12 +2088,13 @@
                 "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
                 "nikic/php-parser": "^5.5",
                 "php": "^7.4 || ^8.0",
-                "php-stubs/generator": "^0.8.3",
-                "phpdocumentor/reflection-docblock": "^5.4.1",
-                "phpstan/phpstan": "^2.1",
+                "php-stubs/generator": "^0.9",
+                "phpdocumentor/reflection-docblock": "^6.0",
+                "phpstan/phpstan": "^2.2",
                 "phpunit/phpunit": "^9.5",
-                "szepeviktor/phpcs-psr-12-neutron-hybrid-ruleset": "^1.1.1",
-                "wp-coding-standards/wpcs": "3.1.0 as 2.3.0"
+                "symfony/polyfill-php80": "*",
+                "szepeviktor/phpcs-psr-12-neutron-hybrid-ruleset": "^1.2",
+                "wp-coding-standards/wpcs": "3.4.1 as 2.3.0"
             },
             "suggest": {
                 "paragonie/sodium_compat": "Pure PHP implementation of libsodium",
@@ -2114,9 +2115,9 @@
             ],
             "support": {
                 "issues": "https://github.com/php-stubs/wordpress-stubs/issues",
-                "source": "https://github.com/php-stubs/wordpress-stubs/tree/v6.8.2"
+                "source": "https://github.com/php-stubs/wordpress-stubs/tree/v7.1.0"
             },
-            "time": "2025-07-16T06:41:00+00:00"
+            "time": "2026-08-28T00:32:06+00:00"
         },
         {
             "name": "phpcompatibility/php-compatibility",
