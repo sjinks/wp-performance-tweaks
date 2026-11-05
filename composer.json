@@ -38,7 +38,7 @@
     "config": {
         "sort-packages": true,
         "platform": {
-            "php": "8.1.31"
+            "php": "8.2.27"
         },
         "allow-plugins": {
             "composer/installers": true,

@@ -15,6 +15,14 @@
             <directory name="vendor" />
         </ignoreFiles>
     </projectFiles>
+    <issueHandlers>
+        <!-- Psalm 7 reports malformed PHPStan annotations in the generated third-party stubs. -->
+        <InvalidDocblock>
+            <errorLevel type="suppress">
+                <file name="vendor/php-stubs/wordpress-stubs/wordpress-stubs.php"/>
+            </errorLevel>
+        </InvalidDocblock>
+    </issueHandlers>
     <stubs>
         <file name="vendor/php-stubs/wordpress-stubs/wordpress-stubs.php" />
         <file name="wordpress.stubs"/>
